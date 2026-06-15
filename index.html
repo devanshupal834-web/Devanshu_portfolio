@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ProCuts | Devanshu Pal — Video Editor & Sound Designer</title>
+  <meta name="description"
+    content="Cinematic video editing and sound design portfolio of Devanshu Pal (ProCuts). Specializing in DaVinci Resolve, AI sound tools, commercials, music videos, and films.">
+  <link rel="icon" type="image/png" sizes="512x512" href="assets/favicon.png">
+  <link rel="shortcut icon" href="assets/favicon.png">
+  <link rel="apple-touch-icon" href="assets/favicon.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="is-loading">
+
+  <!-- Page Loader -->
+  <div class="page-loader" id="pageLoader">
+    <div class="loader-brand">PROCUTS</div>
+    <div class="loader-line">
+      <div class="loader-fill"></div>
+    </div>
+    <span class="loader-label">Loading</span>
+  </div>
+
+  <!-- ========== HEADER / NAVBAR ========== -->
+  <header id="header" class="site-header">
+    <div class="nav-wrap">
+
+      <!-- Logo -->
+      <a href="#home" class="site-logo" aria-label="ProCuts – home">
+        <em>ProCuts</em><span class="logo-pulse"></span>
+      </a>
+
+      <!-- Centre nav links (desktop) -->
+      <nav class="nav-centre" aria-label="Primary navigation">
+        <a href="#home" class="hn-link is-active">Home</a>
+        <a href="#portfolio" class="hn-link">Work</a>
+        <a href="#about" class="hn-link">About</a>
+      </nav>
+
+      <!-- Right-hand CTA + hamburger -->
+      <div class="nav-end">
+        <a href="#contact" class="nav-cta">
+          Get in touch
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <line x1="7" y1="17" x2="17" y2="7" />
+            <polyline points="7,7 17,7 17,17" />
+          </svg>
+        </a>
+        <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+          <span class="ham-top"></span>
+          <span class="ham-bot"></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile fullscreen overlay -->
+    <div class="mobile-overlay" id="mobileOverlay" aria-hidden="true">
+      <nav class="mobile-nav">
+        <a href="#home" class="mob-link" data-idx="0">Home</a>
+        <a href="#portfolio" class="mob-link" data-idx="1">Work</a>
+        <a href="#about" class="mob-link" data-idx="2">About</a>
+        <a href="#contact" class="mob-link" data-idx="3">Contact</a>
+      </nav>
+      <div class="mob-socials">
+        <a href="#">Vimeo ↗</a>
+        <a href="#">YouTube ↗</a>
+        <a href="#">LinkedIn ↗</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========== HERO ========== -->
+  <section class="hero" id="home">
+
+    <!-- Background canvas video (plays at very low opacity) -->
+    <canvas class="hero-bg-canvas" id="heroBgCanvas"></canvas>
+
+    <div class="hero-inner">
+
+      <div class="hero-label" data-anim="fade-up" data-delay="0">
+        <span class="eyebrow">Devanshu Pal &nbsp;·&nbsp; Video Editor &amp; Sound Designer &nbsp;·&nbsp; 2026</span>
+      </div>
+
+      <h1 class="hero-headline" data-split-lines>
+        Crafting Stories<br>Frame by <em>Frame.</em>
+      </h1>
+
+      <div class="hero-foot">
+        <p class="hero-sub" data-anim="fade-up" data-delay="0.55">
+          Photographer, Videographer &amp; Editor — crafting visual stories through light, motion, and sound.
+        </p>
+        <div class="hero-actions" data-anim="fade-up" data-delay="0.7">
+          <a href="#portfolio" class="pill primary">View Work <svg width="11" height="11" viewBox="0 0 24 24"
+              fill="none" stroke="currentColor" stroke-width="2.5">
+              <line x1="7" y1="17" x2="17" y2="7" />
+              <polyline points="7,7 17,7 17,17" />
+            </svg></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll cue — pinned at bottom centre -->
+    <div class="scroll-cue">
+      <div class="scroll-line-anim"></div>
+      <span>Scroll</span>
+    </div>
+  </section>
+
+  <!-- ========== TICKER ========== -->
+  <div class="ticker" aria-hidden="true">
+    <div class="ticker-belt">
+      <span>DaVinci Resolve</span><span class="tick-dot">·</span>
+      <span>Photography</span><span class="tick-dot">·</span>
+      <span>AI Sound Design</span><span class="tick-dot">·</span>
+      <span>Color Grading</span><span class="tick-dot">·</span>
+      <span>Lightroom</span><span class="tick-dot">·</span>
+      <span>Music Videos</span><span class="tick-dot">·</span>
+      <span>Videography</span><span class="tick-dot">·</span>
+      <span>Commercials</span><span class="tick-dot">·</span>
+      <span>Narrative Film</span><span class="tick-dot">·</span>
+      <span>Sound Mixing</span><span class="tick-dot">·</span>
+      <span>Video Editing</span><span class="tick-dot">·</span>
+      <!-- duplicate for seamless loop -->
+      <span>DaVinci Resolve</span><span class="tick-dot">·</span>
+      <span>Photography</span><span class="tick-dot">·</span>
+      <span>AI Sound Design</span><span class="tick-dot">·</span>
+      <span>Color Grading</span><span class="tick-dot">·</span>
+      <span>Lightroom</span><span class="tick-dot">·</span>
+      <span>Music Videos</span><span class="tick-dot">·</span>
+      <span>Videography</span><span class="tick-dot">·</span>
+      <span>Commercials</span><span class="tick-dot">·</span>
+      <span>Narrative Film</span><span class="tick-dot">·</span>
+      <span>Sound Mixing</span><span class="tick-dot">·</span>
+      <span>Video Editing</span><span class="tick-dot">·</span>
+    </div>
+  </div>
+
+  <!-- ========== PORTFOLIO ========== -->
+  <section class="works-section" id="portfolio">
+    <div class="container">
+
+      <!-- Section header: Rekorder style — number + title left, blurb + filters right -->
+      <div class="section-head">
+        <div class="sh-left">
+          <span class="sh-num" data-anim="fade-up">01 —</span>
+          <h2 class="sh-title" data-split-lines>Selected<br>Work</h2>
+        </div>
+        <div class="sh-right" data-anim="fade-up" data-delay="0.2">
+          <p>A curated showcase of my work across photography, videography, and video editing — from commercial
+            campaigns to intimate portraits.</p>
+          <div class="filters">
+            <button class="f-chip is-active" data-filter="photography">Photographs</button>
+            <button class="f-chip" data-filter="videos">Videos</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Works grid -->
+      <div class="works-grid" id="worksGrid">
+
+        <!-- Portrait card 1 -->
+        <article class="work-card" data-category="music" data-anim="fade-up" data-delay="0.05">
+          <div class="wc-media" data-video-src="assets/moc_01.mp4">
+            <div class="wc-img"><img src="assets/music_video_thumbnail.png" alt="Neon Rhythms"></div>
+            <div class="wc-hover">
+              <div class="wc-play"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                  <polygon points="8,5 19,12 8,19" />
+                </svg></div>
+            </div>
+            <span class="wc-badge">Motivational</span>
+          </div>
+          <div class="wc-body">
+            <div class="wc-row">
+              <h3 class="wc-title">Gym Motivation</h3>
+              <svg class="wc-arr" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="1.5">
+                <line x1="7" y1="17" x2="17" y2="7" />
+                <polyline points="7,7 17,7 17,17" />
+              </svg>
+            </div>
+            <p class="wc-desc">Vibrant glitch transitions, speed ramps, and heavy Fusion composition work.</p>
+            <div class="wc-foot">
+              <span class="wc-role">Editor &amp; VFX Artist</span>
+              <div class="wc-tools"><span>After Effects</span><span>Resolve</span></div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Portrait card 2 -->
+        <article class="work-card" data-category="narrative" data-anim="fade-up" data-delay="0.1">
+          <div class="wc-media" data-video-src="assets/moc_02.mp4">
+            <div class="wc-img"><img src="assets/documentary_thumbnail.png" alt="The Silent Sea"></div>
+            <div class="wc-hover">
+              <div class="wc-play"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                  <polygon points="8,5 19,12 8,19" />
+                </svg></div>
+            </div>
+            <span class="wc-badge">Promotional</span>
+          </div>
+          <div class="wc-body">
+            <div class="wc-row">
+              <h3 class="wc-title">Promotional</h3>
+              <svg class="wc-arr" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="1.5">
+                <line x1="7" y1="17" x2="17" y2="7" />
+                <polyline points="7,7 17,7 17,17" />
+              </svg>
+            </div>
+            <p class="wc-desc">Intimate documentary focusing on storytelling, organic pacing, and natural color.</p>
+            <div class="wc-foot">
+              <span class="wc-role">Lead Editor</span>
+              <div class="wc-tools"><span>Resolve</span><span>AI Audio</span></div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Portrait card 3 -->
+        <article class="work-card" data-category="social" data-anim="fade-up" data-delay="0.15">
+          <div class="wc-media" data-video-src="assets/moc_03.mp4">
+            <div class="wc-img"><img src="assets/fashion_thumbnail.png" alt="HyperLoop Fashion"></div>
+            <div class="wc-hover">
+              <div class="wc-play"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                  <polygon points="8,5 19,12 8,19" />
+                </svg></div>
+            </div>
+            <span class="wc-badge">Fashion</span>
+          </div>
+          <div class="wc-body">
+            <div class="wc-row">
+              <h3 class="wc-title">HyperLoop Fashion</h3>
+              <svg class="wc-arr" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="1.5">
+                <line x1="7" y1="17" x2="17" y2="7" />
+                <polyline points="7,7 17,7 17,17" />
+              </svg>
+            </div>
+            <p class="wc-desc">Rapid cuts ,and precision sound effects for fashion film.</p>
+            <div class="wc-foot">
+              <span class="wc-role">Editor &amp; Colorist</span>
+              <div class="wc-tools"><span>Resolve</span><span>Capcut</span></div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Landscape card — full width bottom -->
+        <article class="work-card wc-landscape" data-category="commercial" data-anim="fade-up" data-delay="0.2">
+          <div class="wc-media" data-video-src="assets/moc_04.mp4">
+            <div class="wc-img"><img src="assets/commercial_thumbnail.png" alt="AeroX Luxury Drive"></div>
+            <div class="wc-hover">
+              <div class="wc-play"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                  <polygon points="8,5 19,12 8,19" />
+                </svg></div>
+            </div>
+            <span class="wc-badge">Insta Post</span>
+          </div>
+          <div class="wc-body">
+            <div class="wc-row">
+              <h3 class="wc-title">Clip-montage reel edit</h3>
+              <svg class="wc-arr" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="1.5">
+                <line x1="7" y1="17" x2="17" y2="7" />
+                <polyline points="7,7 17,7 17,17" />
+              </svg>
+            </div>
+            <p class="wc-desc">High-contrast clip-montage emphasizing dynamic motion, color grading , and videography.
+            </p>
+            <div class="wc-foot">
+              <span class="wc-role">Editor &amp; Colorist</span>
+              <div class="wc-tools"><span>Resolve</span><span>Instagram</span></div>
+            </div>
+          </div>
+        </article>
+
+      </div><!-- /works-grid -->
+
+      <!-- Photography Mood Board (shown when Photography filter active) -->
+      <div class="photo-moodboard" id="photoMoodboard" style="display:none;">
+        <div class="mb-item mb-tall"> <img src="assets/photo_01.jpg" alt="Portrait" loading="lazy"></div>
+        <div class="mb-item"> <img src="assets/photo_02.jpg" alt="Cityscape" loading="lazy"></div>
+        <div class="mb-item mb-sq"> <img src="assets/photo_03.jpg" alt="Product" loading="lazy"></div>
+        <div class="mb-item"> <img src="assets/photo_04.jpg" alt="Street" loading="lazy"></div>
+        <div class="mb-item mb-tall"> <img src="assets/photo_05.jpg" alt="Concert" loading="lazy"></div>
+        <div class="mb-item mb-sq"> <img src="assets/photo_06.jpg" alt="Landscape" loading="lazy"></div>
+        <div class="mb-item mb-tall"> <img src="assets/photo_07.jpg" alt="Architecture" loading="lazy"></div>
+        <div class="mb-item"> <img src="assets/photo_08.jpg" alt="Fashion" loading="lazy"></div>
+        <div class="mb-item mb-sq"> <img src="assets/photo_09.jpg" alt="Aerial" loading="lazy"></div>
+        <div class="mb-item"> <img src="assets/photo_10.jpg" alt="Sports" loading="lazy"></div>
+        <div class="mb-item mb-sq"> <img src="assets/photo_11.jpg" alt="Macro" loading="lazy"></div>
+        <div class="mb-item mb-tall"> <img src="assets/photo_12.jpg" alt="Night" loading="lazy"></div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========== ABOUT ========== -->
+  <section class="about-section" id="about">
+    <div class="container">
+
+      <!-- Heading above the two-column grid -->
+      <div class="about-header" data-anim="fade-up">
+        <span class="sh-num">02 —</span>
+        <h2 class="sh-title about-heading" data-split-lines>The<br>Editor</h2>
+      </div>
+
+      <div class="about-grid">
+
+        <!-- Left column: portrait image only -->
+        <div class="ag-left">
+          <div class="about-img-wrap" data-anim="fade-up" data-delay="0.1">
+            <img src="assets/bio_avatar.png" alt="Devanshu Pal">
+          </div>
+        </div>
+
+        <div class="ag-right">
+          <div class="about-bio" data-anim="fade-up">
+            <h3>Devanshu Pal</h3>
+            <p>I'm a photographer, videographer, and video editor passionate about telling stories through every medium.
+              Whether behind the lens capturing a moment, on set directing a shoot, or in the edit suite shaping the
+              final cut — I bring creative vision to life.</p>
+            <p>Specialising in DaVinci Resolve, Adobe Lightroom, and AI audio tools, I deliver polished commercial
+              content, cinematic films, and vibrant photography for brands and creators.</p>
+          </div>
+
+
+
+          <div class="sw-grid" data-anim="fade-up" data-delay="0.2">
+            <div class="sw-card"><span class="sw-abbr">Dr</span><span>DaVinci Resolve</span></div>
+            <div class="sw-card"><span class="sw-abbr">Lr</span><span>Adobe Lightroom</span></div>
+            <div class="sw-card"><span class="sw-abbr">Pr</span><span>Premiere Pro</span></div>
+            <div class="sw-card"><span class="sw-abbr">Ae</span><span>After Effects</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CONTACT ========== -->
+  <section class="contact-section" id="contact">
+    <div class="container">
+      <div class="contact-grid">
+
+        <div class="cg-left">
+          <span class="sh-num" data-anim="fade-up">03 —</span>
+          <h2 class="sh-title contact-title" data-split-lines>Let's edit<br><em>something</em><br>amazing.</h2>
+
+          <p class="contact-sub" data-anim="fade-up" data-delay="0.2">
+            Have an exciting project idea? Drop your details in the form or reach out directly — I'll get back to you
+            within 24 hours.
+          </p>
+
+          <!-- 2×2 Contact Cards -->
+          <div class="contact-cards" data-anim="fade-up" data-delay="0.3">
+
+            <a class="cc-card" href="mailto:devprocuts@gmail.com" target="_blank" rel="noopener">
+              <span class="cc-icon cc-email">
+                <!-- Gmail envelope -->
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" width="22" height="22">
+                  <rect x="2" y="4" width="20" height="16" rx="3" fill="#EA4335" opacity=".15" />
+                  <path d="M2 7l10 7 10-7" stroke="#EA4335" stroke-width="1.8" stroke-linecap="round" />
+                  <rect x="2" y="4" width="20" height="16" rx="3" stroke="#EA4335" stroke-width="1.5" />
+                </svg>
+              </span>
+              <div class="cc-text">
+                <span class="cc-label">Email Me</span>
+                <span class="cc-val">devprocuts@gmail.com</span>
+              </div>
+              <svg class="cc-arr" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2">
+                <line x1="7" y1="17" x2="17" y2="7" />
+                <polyline points="7,7 17,7 17,17" />
+              </svg>
+            </a>
+
+            <a class="cc-card" href="https://github.com/devanshupal834" target="_blank" rel="noopener">
+              <span class="cc-icon cc-github">
+                <!-- GitHub mark -->
+                <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22">
+                  <path
+                    d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" />
+                </svg>
+              </span>
+              <div class="cc-text">
+                <span class="cc-label">GitHub Profile</span>
+                <span class="cc-val">devanshupal834</span>
+              </div>
+              <svg class="cc-arr" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2">
+                <line x1="7" y1="17" x2="17" y2="7" />
+                <polyline points="7,7 17,7 17,17" />
+              </svg>
+            </a>
+
+            <a class="cc-card" href="https://www.linkedin.com/in/devanshu-pal-94b52b409/" target="_blank"
+              rel="noopener">
+              <span class="cc-icon cc-linkedin">
+                <!-- LinkedIn -->
+                <svg viewBox="0 0 24 24" fill="#0A66C2" width="22" height="22">
+                  <rect x="2" y="2" width="20" height="20" rx="4" fill="#0A66C2" opacity=".15" />
+                  <path fill="#0A66C2"
+                    d="M6.94 5a2 2 0 1 1-4-.002A2 2 0 0 1 6.94 5zM7 8.48H3V21h4V8.48zm6.32 0H9.34V21h3.94v-6.57c0-3.66 4.77-4 4.77 0V21H22v-7.93c0-6.17-7.06-5.94-8.72-2.91l.04-1.68z" />
+                </svg>
+              </span>
+              <div class="cc-text">
+                <span class="cc-label">LinkedIn Connect</span>
+                <span class="cc-val">Devanshu Pal</span>
+              </div>
+              <svg class="cc-arr" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2">
+                <line x1="7" y1="17" x2="17" y2="7" />
+                <polyline points="7,7 17,7 17,17" />
+              </svg>
+            </a>
+
+            <a class="cc-card" href="https://wa.me/917667338840" target="_blank" rel="noopener">
+              <span class="cc-icon cc-whatsapp">
+                <!-- WhatsApp -->
+                <svg viewBox="0 0 24 24" width="22" height="22">
+                  <circle cx="12" cy="12" r="10" fill="#25D366" opacity=".15" />
+                  <path fill="#25D366"
+                    d="M12 2C6.48 2 2 6.48 2 12c0 1.85.5 3.58 1.37 5.07L2 22l5.09-1.34A9.93 9.93 0 0012 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm4.9 14.08c-.21.58-1.22 1.11-1.68 1.16-.43.05-.96.07-1.55-.1-.36-.1-.82-.26-1.4-.51-2.46-1.06-4.07-3.54-4.19-3.7-.12-.16-.99-1.31-.99-2.5s.63-1.77.85-2.01c.22-.24.48-.3.64-.3h.46c.15 0 .35-.06.55.42.21.49.71 1.74.77 1.87.06.13.1.28.02.45-.08.17-.12.27-.24.42l-.36.42c-.12.12-.24.25-.1.49.14.24.62 1.02 1.33 1.65.91.81 1.68 1.06 1.92 1.18.24.12.38.1.52-.06l.75-.88c.14-.16.28-.13.47-.08.19.06 1.23.58 1.44.69.21.11.35.16.4.25.05.09.05.53-.16 1.1z" />
+                </svg>
+              </span>
+              <div class="cc-text">
+                <span class="cc-label">WhatsApp Me</span>
+                <span class="cc-val">+91 76673 38840</span>
+              </div>
+              <svg class="cc-arr" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2">
+                <line x1="7" y1="17" x2="17" y2="7" />
+                <polyline points="7,7 17,7 17,17" />
+              </svg>
+            </a>
+
+          </div>
+        </div>
+
+        <div class="cg-right" data-anim="fade-up" data-delay="0.15">
+          <div class="form-ok" id="contactSuccess">✓ Message sent. I'll be in touch shortly.</div>
+          <form id="contactForm">
+            <div class="ff-group">
+              <input type="text" id="formName" class="ff-input" placeholder=" " required>
+              <label for="formName" class="ff-label">Your Name</label>
+              <div class="ff-underline"></div>
+            </div>
+            <div class="ff-group">
+              <input type="email" id="formEmail" class="ff-input" placeholder=" " required>
+              <label for="formEmail" class="ff-label">Email Address</label>
+              <div class="ff-underline"></div>
+            </div>
+            <div class="ff-group">
+              <input type="text" id="formProject" class="ff-input" placeholder=" ">
+              <label for="formProject" class="ff-label">Project Type</label>
+              <div class="ff-underline"></div>
+            </div>
+            <div class="ff-group">
+              <textarea id="formMessage" class="ff-input" placeholder=" " required></textarea>
+              <label for="formMessage" class="ff-label">Tell me about your project</label>
+              <div class="ff-underline"></div>
+            </div>
+            <button type="submit" class="ff-submit">
+              <span>Send Message</span>
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <line x1="7" y1="17" x2="17" y2="7" />
+                <polyline points="7,7 17,7 17,17" />
+              </svg>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== HIRE ME CARD ========== -->
+  <div class="hire-card" id="hireCard" role="complementary" aria-label="Availability status">
+    <div class="hc-avatar">
+      <img src="assets/bio_avatar.png" alt="Devanshu Pal">
+      <span class="hc-pulse"></span>
+    </div>
+    <div class="hc-body">
+      <p class="hc-title">Devanshu is <span class="hc-avail">available for work</span></p>
+      <p class="hc-sub">Photography &nbsp;·&nbsp; Videography &nbsp;·&nbsp; Video Editing</p>
+    </div>
+    <a href="#contact" class="hc-btn" id="hireBtn">Hire Me</a>
+    <button class="hc-close" id="hireClose" aria-label="Dismiss">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+        <line x1="18" y1="6" x2="6" y2="18" />
+        <line x1="6" y1="6" x2="18" y2="18" />
+      </svg>
+    </button>
+  </div>
+
+
+  <!-- ========== LIGHTBOX ========== -->
+  <div class="lb-wrap" id="videoLightbox">
+    <button class="lb-close" id="lightboxClose">
+      <span>Close</span>
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <line x1="18" y1="6" x2="6" y2="18" />
+        <line x1="6" y1="6" x2="18" y2="18" />
+      </svg>
+    </button>
+    <div class="lb-stage">
+      <div class="lb-video" id="videoContainer"></div>
+    </div>
+  </div>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <a href="#home" class="footer-logo"><em>ProCuts</em><span class="logo-pulse"></span></a>
+      <nav class="footer-nav">
+        <a href="#portfolio">Work</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <p class="footer-copy">© 2026 ProCuts — Devanshu Pal</p>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+
+</html>
