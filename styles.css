@@ -270,6 +270,8 @@ button {
   display: flex;
   align-items: center;
   gap: 1.5rem;
+  margin-left: auto;
+  /* always pins to right edge, works on both mobile and desktop */
 }
 
 /* CTA pill */
@@ -961,6 +963,7 @@ button {
 .work-card.wc-landscape .wc-desc {
   display: -webkit-box;
   -webkit-line-clamp: 1;
+  line-clamp: 1;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
@@ -1951,7 +1954,18 @@ textarea.ff-input {
     --gutter: 1rem;
   }
 
-  /* Hero */
+  /* Hero — center content vertically on mobile, not bottom-aligned */
+  .hero {
+    justify-content: center;
+  }
+
+  .hero-inner {
+    justify-content: center;
+    padding-top: calc(var(--nav-h) + 1rem);
+    padding-bottom: 3rem;
+    gap: 1.5rem;
+  }
+
   .hero-headline {
     font-size: clamp(2.2rem, 11vw, 3.5rem);
   }
@@ -1960,12 +1974,8 @@ textarea.ff-input {
     font-size: .9rem;
   }
 
-  .hero-scroll-cue {
-    display: none;
-  }
-
-  /* Background video: hide on mobile for performance */
-  .hero-bg video {
+  /* Hide scroll cue on mobile */
+  .scroll-cue {
     display: none;
   }
 
@@ -2010,9 +2020,15 @@ textarea.ff-input {
     font-size: clamp(1.8rem, 7vw, 2.5rem) !important;
   }
 
+  /* Taller photo on mobile so face + body is fully visible */
   .about-img-wrap {
-    height: 280px;
+    height: 420px;
   }
+
+  .about-img-wrap img {
+    object-position: center 15%;
+  }
+
 
   .about-bio h3 {
     font-size: 1.4rem;
