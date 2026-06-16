@@ -400,6 +400,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initLightbox();
   initContactForm();
   initSmoothScroll();
-  initLineDraw();
+  initLineDraw();   
   initHireCard();
 });
