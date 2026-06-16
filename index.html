@@ -276,7 +276,7 @@
 
       </div><!-- /works-grid -->
 
-      <!-- Photography Mood Board (shown when Photography filter active) -->
+       <!-- Photography Mood Board (shown when Photography filter active) -->
       <div class="photo-moodboard" id="photoMoodboard" style="display:none;">
         <div class="mb-item mb-tall"> <img src="assets/photo_01.jpg" alt="Portrait" loading="lazy"></div>
         <div class="mb-item"> <img src="assets/photo_02.JPG" alt="Cityscape" loading="lazy"></div>
@@ -291,7 +291,6 @@
         <div class="mb-item mb-sq"> <img src="assets/photo_11.jpg" alt="Macro" loading="lazy"></div>
         <div class="mb-item mb-tall"> <img src="assets/photo_12.JPG" alt="Night" loading="lazy"></div>
       </div>
-
     </div>
   </section>
 
@@ -440,23 +439,29 @@
         <div class="cg-right" data-anim="fade-up" data-delay="0.15">
           <div class="form-ok" id="contactSuccess">✓ Message sent. I'll be in touch shortly.</div>
           <form id="contactForm">
+            <!-- Web3Forms config -->
+            <input type="hidden" name="access_key" value="c8c87f2c-0bdd-4c14-8664-e8431fd9b194">
+            <input type="hidden" name="subject" value="New message from ProCuts Portfolio">
+            <input type="hidden" name="from_name" value="ProCuts Portfolio">
+            <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
+
             <div class="ff-group">
-              <input type="text" id="formName" class="ff-input" placeholder=" " required>
+              <input type="text" id="formName" name="name" class="ff-input" placeholder=" " required>
               <label for="formName" class="ff-label">Your Name</label>
               <div class="ff-underline"></div>
             </div>
             <div class="ff-group">
-              <input type="email" id="formEmail" class="ff-input" placeholder=" " required>
+              <input type="email" id="formEmail" name="email" class="ff-input" placeholder=" " required>
               <label for="formEmail" class="ff-label">Email Address</label>
               <div class="ff-underline"></div>
             </div>
             <div class="ff-group">
-              <input type="text" id="formProject" class="ff-input" placeholder=" ">
+              <input type="text" id="formProject" name="project_type" class="ff-input" placeholder=" ">
               <label for="formProject" class="ff-label">Project Type</label>
               <div class="ff-underline"></div>
             </div>
             <div class="ff-group">
-              <textarea id="formMessage" class="ff-input" placeholder=" " required></textarea>
+              <textarea id="formMessage" name="message" class="ff-input" placeholder=" " required></textarea>
               <label for="formMessage" class="ff-label">Tell me about your project</label>
               <div class="ff-underline"></div>
             </div>
