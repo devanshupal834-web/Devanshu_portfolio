@@ -315,21 +315,39 @@ function initLightbox() {
 }
 
 
-/* ─── Contact Form ───────────────────────────────── */
+/* ─── Contact Form (Web3Forms) ──────────────────── */
 function initContactForm() {
   const form = document.getElementById('contactForm');
   const success = document.getElementById('contactSuccess');
   if (!form) return;
 
-  form.addEventListener('submit', e => {
+  form.addEventListener('submit', async e => {
     e.preventDefault();
     const btn = form.querySelector('.ff-submit span');
+    const origTxt = btn ? btn.textContent : 'Send Message';
     if (btn) btn.textContent = 'Sending…';
-    setTimeout(() => {
-      form.reset();
-      form.style.display = 'none';
-      success.classList.add('visible');
-    }, 1200);
+
+    const data = new FormData(form);
+
+    try {
+      const res = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        body: data
+      });
+      const json = await res.json();
+
+      if (json.success) {
+        form.reset();
+        form.style.display = 'none';
+        success.classList.add('visible');
+      } else {
+        throw new Error(json.message || 'Submission failed');
+      }
+    } catch (err) {
+      if (btn) btn.textContent = 'Error — Try again';
+      console.error('Web3Forms error:', err);
+      setTimeout(() => { if (btn) btn.textContent = origTxt; }, 3000);
+    }
   });
 }
 
@@ -400,6 +418,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initLightbox();
   initContactForm();
   initSmoothScroll();
-  initLineDraw();   
+  initLineDraw();
   initHireCard();
 });
