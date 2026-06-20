@@ -15,7 +15,7 @@ function finishLoader() {
 
 // Wait for CSS animation (loader-fill: 1.6s) + small buffer
 window.addEventListener('load', () => {
-  setTimeout(finishLoader, 2000);
+  setTimeout(finishLoader, 900);
 });
 
 /* ─── Hero Background Canvas Video (Ken Burns) ────── */
