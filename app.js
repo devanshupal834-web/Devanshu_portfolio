@@ -15,11 +15,14 @@ function finishLoader() {
 
 // Wait for CSS animation (loader-fill: 1.6s) + small buffer
 window.addEventListener('load', () => {
-  setTimeout(finishLoader, 900);
+  setTimeout(finishLoader, 500);
 });
 
 /* ─── Hero Background Canvas Video (Ken Burns) ────── */
 function initHeroBgVideo() {
+  // Skip on mobile — saves CPU on low-end devices
+  if (window.innerWidth <= 768) return;
+
   const canvas = document.getElementById('heroBgCanvas');
   if (!canvas) return;
 
