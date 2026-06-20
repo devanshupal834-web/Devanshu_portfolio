@@ -2020,13 +2020,16 @@ textarea.ff-input {
     font-size: clamp(1.8rem, 7vw, 2.5rem) !important;
   }
 
-  /* Taller photo on mobile so face + body is fully visible */
+  /* About photo — consistent across all mobile screens */
   .about-img-wrap {
     height: 420px;
   }
 
   .about-img-wrap img {
-    object-position: center 15%;
+    object-fit: cover;
+    object-position: center 10%;  /* shows face + upper body on every device */
+    width: 100%;
+    height: 100%;
   }
 
 
@@ -2076,19 +2079,48 @@ textarea.ff-input {
     flex-wrap: wrap;
   }
 
-  /* Hire card */
+  /* Hire card — smaller text + close button on mobile */
   .hire-card {
     width: calc(100vw - 1.5rem);
     bottom: .75rem;
-    padding: .8rem 1rem;
+    padding: .65rem .85rem;
+    gap: .6rem;
+  }
+
+  .hc-avatar img,
+  .hc-avatar {
+    width: 36px;
+    height: 36px;
   }
 
   .hc-body {
-    gap: .1rem;
+    gap: .05rem;
   }
 
   .hc-title {
-    font-size: .8rem;
+    font-size: .72rem;
+    white-space: normal;   /* allow wrap on narrow phones */
+  }
+
+  .hc-sub {
+    font-size: .60rem;
+    white-space: normal;
+  }
+
+  .hc-btn {
+    font-size: .67rem;
+    padding: .4rem .75rem;
+  }
+
+  /* Smaller ✕ close button */
+  .hc-close {
+    width: 18px;
+    height: 18px;
+  }
+
+  .hc-close svg {
+    width: 9px;
+    height: 9px;
   }
 
   /* Lightbox: true full screen */
