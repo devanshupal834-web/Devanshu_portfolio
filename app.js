@@ -421,4 +421,3 @@ document.addEventListener('DOMContentLoaded', () => {
   initLineDraw();
   initHireCard();
 });
-   
